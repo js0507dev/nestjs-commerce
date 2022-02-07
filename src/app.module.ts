@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { WinstonModule } from 'nest-winston';
-import { transport } from 'winston';
 
 import { AppController } from '@src/app.controller';
 import { AppService } from '@src/app.service';

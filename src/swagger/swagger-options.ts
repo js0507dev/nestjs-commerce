@@ -1,4 +1,4 @@
-import { DocumentBuilder, SwaggerCustomOptions, SwaggerDocumentOptions, SwaggerModule } from '@nestjs/swagger';
+import { DocumentBuilder, SwaggerCustomOptions, SwaggerDocumentOptions } from '@nestjs/swagger';
 
 export function makeSwaggerDocumentConfig() {
   return new DocumentBuilder()
