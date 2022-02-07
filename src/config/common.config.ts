@@ -11,6 +11,7 @@ enum NodeEnvironment {
 export interface CommonConfig {
   nodeEnv: NodeEnvironment;
   port: number;
+  isLocal: boolean;
 }
 
 export function commonConfig() {
@@ -19,6 +20,7 @@ export function commonConfig() {
     (): CommonConfig => ({
       nodeEnv: NodeEnvironment[process.env.NODE_ENV] || NodeEnvironment.Development,
       port: Number(process.env.PORT) || 3000,
+      isLocal: NodeEnvironment[process.env.NODE_ENV] === NodeEnvironment.Development,
     }),
   );
 }
