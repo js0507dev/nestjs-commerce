@@ -12,6 +12,7 @@ export interface CommonConfig {
   nodeEnv: NodeEnvironment;
   port: number;
   isLocal: boolean;
+  jwtSecret: string;
 }
 
 export function commonConfig() {
@@ -21,6 +22,7 @@ export function commonConfig() {
       nodeEnv: NodeEnvironment[process.env.NODE_ENV] || NodeEnvironment.Development,
       port: Number(process.env.PORT) || 3000,
       isLocal: NodeEnvironment[process.env.NODE_ENV] === NodeEnvironment.Development,
+      jwtSecret: process.env.JWT_SECRET || 'bd-shopping',
     }),
   );
 }
