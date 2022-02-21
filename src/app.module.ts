@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { WinstonModule } from 'nest-winston';
 
+import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 
 import { AppController } from '@src/app.controller';
@@ -38,6 +39,7 @@ import { LoggerOption } from '@src/logger/logger-option';
       },
     }),
     UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
